@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "tablet_APP",
+    "name": "tablet_APP_v2",
     "slug": "my-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -38,7 +38,8 @@
             "backgroundColor": "#000000"
           }
         }
-      ]
+      ],
+      "expo-background-task"
     ],
     "experiments": {
       "typedRoutes": true,

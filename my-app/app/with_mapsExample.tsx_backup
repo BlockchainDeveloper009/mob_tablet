@@ -1,0 +1,70 @@
+import React from 'react';
+import { View, Text, Platform, ViewStyle, StyleProp } from 'react-native';
+import { MapViewProps, Region } from 'react-native-maps';
+
+// Define the type for the external props the component accepts
+interface MapComponentProps {
+  initialRegion: Region;
+  style: StyleProp<ViewStyle>;
+  // Add other necessary MapViewProps here as needed
+}
+
+// 1. Conditional Import of MapView
+// Define a type for MapView that includes the full MapViewProps
+let MapView: React.ComponentType<MapViewProps> | undefined;
+
+// This conditional require prevents the native-only code from being bundled on web
+if (Platform.OS !== 'web') {
+  try {
+    // The require() call's return type is often 'any', so we assert the type.
+    MapView = require('react-native-maps').default as React.ComponentType<MapViewProps>;
+  } catch (e) {
+    console.error("Error loading react-native-maps:", e);
+  }
+}
+
+/**
+ * A platform-aware Map component that uses react-native-maps on mobile
+ * and a simple placeholder on the web to prevent bundling errors.
+ */
+const MapComponent: React.FC<MapComponentProps> = ({ initialRegion, style }) => {
+  // --- Web Implementation ---
+  if (Platform.OS === 'web') {
+    // Define a basic placeholder style that matches the structure of the input style
+    const webPlaceholderStyle: ViewStyle = {
+      width: '100%',
+      height: 300,
+      backgroundColor: '#f0f0f0',
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderWidth: 1,
+      borderColor: '#ccc',
+    };
+    
+    return (
+      <View style={[style, webPlaceholderStyle]}>
+        <Text style={{ color: '#333', fontWeight: 'bold' }}>
+          🗺️ Map Placeholder (Web)
+        </Text>
+      </View>
+    );
+  }
+
+  // --- Native Implementation ---
+  if (MapView) {
+    return (
+      <MapView 
+        // We use 'as ViewStyle' here because style is StyleProp<ViewStyle> 
+        // which may include arrays, and MapView expects a specific format.
+        style={style as ViewStyle} 
+        initialRegion={initialRegion} 
+        // Add other native MapView props here
+      />
+    );
+  }
+  
+  // Fallback for native if the MapView module failed to load (e.g., install issue)
+  return null;
+};
+
+export default MapComponent;

@@ -1,13 +1,16 @@
 import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import { Platform, StyleSheet, View } from 'react-native';
 
 import { HelloWave } from '@/components/hello-wave';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { Link } from 'expo-router';
+import { Link , useRouter } from 'expo-router';
+import  SearchBar from '../../components/SearchBar';
+import React from 'react';
 
 export default function HomeScreen() {
+  const router = useRouter();
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
@@ -21,6 +24,11 @@ export default function HomeScreen() {
         <ThemedText type="title">Welcome User1!</ThemedText>
         <HelloWave />
       </ThemedView>
+      <View className="flex-1 mt-5">
+        <SearchBar onPress = {() => router.push("/search")}
+                placeholder = "Search for a movie"        
+        />
+      </View>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
         <ThemedText>

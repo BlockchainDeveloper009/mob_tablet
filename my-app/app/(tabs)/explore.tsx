@@ -31,6 +31,33 @@ export default function TabTwoScreen() {
         </ThemedText>
       </ThemedView>
       <ThemedText>This app includes example code to help you get started.</ThemedText>
+      <ExternalLink href="/dashboard">
+          <ThemedText type="link">Dashboard Learn more</ThemedText>
+        </ExternalLink>
+        <ExternalLink href="/with_alarmScreen">
+          <ThemedText type="link">with_alarmScreen Learn more</ThemedText>
+        </ExternalLink>
+        <ExternalLink href="/scheduleScreen">
+          <ThemedText type="link">scheduleScreen Learn more</ThemedText>
+        </ExternalLink>
+        <ExternalLink href="/with_cameraExample">
+          <ThemedText type="link">with_cameraExample</ThemedText>
+        </ExternalLink>
+        <ExternalLink href="/with_mapsExample">
+          <ThemedText type="link">with_mapsExample</ThemedText>
+        </ExternalLink>
+        <ExternalLink href="/with_sqlLiteExamples">
+          <ThemedText type="link">with_sqlLiteExamples</ThemedText>
+        </ExternalLink>
+        <ExternalLink href="/dashboard2">
+          <ThemedText type="link">dashboard2</ThemedText>
+        </ExternalLink>
+        <ExternalLink href="/clockReminders">
+          <ThemedText type="link">clockReminders</ThemedText>
+        </ExternalLink>
+        <ExternalLink href="/dailyCompletedWorks">
+          <ThemedText type="link">dailyCompletedWorks</ThemedText>
+        </ExternalLink>
       <Collapsible title="File-based routing">
         <ThemedText>
           This app has two screens:{' '}
@@ -42,7 +69,7 @@ export default function TabTwoScreen() {
           sets up the tab navigator.
         </ThemedText>
         <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
+          <ThemedText type="link">Dashboard Learn more</ThemedText>
         </ExternalLink>
       </Collapsible>
       <Collapsible title="Android, iOS, and web support">
