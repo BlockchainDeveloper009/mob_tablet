@@ -1,0 +1,38 @@
+{
+    "inventory_db": {
+        "db_name": "db.db",
+        "live_path": "C:\\sqllite3\\db\\active_db.db",
+        "archive_path": "C:\\sqllite3\\db\\archive",
+        "sql_file_path": "insert_queries.sql",
+        "purge_config": {
+            "frequency_days": 30,
+            "last_purge_date": "2025-09-01",
+            "tables_to_purge": [
+                {"table": "orders", "age_days": 365}
+            ]
+        },
+        "managed_tables": [
+            "products",
+            "orders",
+            "order_items"
+        ]
+    },
+    "stocks_db": {
+        "db_name": "stocks_db.db",
+        "live_path": "C:\\sqllite3\\db\\stocks_db\\stockdata.litedb",
+        "archive_path": "C:\\sqllite3\\db\\stocks_db\\archive",
+        "sql_file_path": "stocks_insert.sql",
+        "purge_config": {
+            "frequency_days": 30,
+            "last_purge_date": "2025-09-01",
+            "tables_to_purge": [
+                {"table": "history", "age_days": 180}
+            ]
+        },
+        "managed_tables": [
+            "stocks",
+            "history",
+            "transactions"
+        ]
+    }
+}

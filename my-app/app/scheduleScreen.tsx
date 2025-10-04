@@ -33,7 +33,7 @@ export default function ScheduleScreen() {
     // Schedule for 1 hour from now for testing
     const oneHourFromNow = new Date(Date.now() + 60 * 60 * 1000); 
     
-    await setTargetEventTime(oneHourFromNow);
+    await                                                                                                                                                                                                                                                                                                           Time(oneHourFromNow);
     setTargetTime(oneHourFromNow);
     setStatus('Task active! Will check around: ' + oneHourFromNow.toLocaleTimeString());
   };

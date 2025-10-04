@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import RecommendationsScreen from './with_fAutoRecommendationLoad';
 import { Text, View, StyleSheet, ScrollView, Image, FlatList, Dimensions, TouchableOpacity } from 'react-native';
 
 // --- Global Configuration ---
@@ -135,14 +136,18 @@ const TasksPage = ({ geminiInsight }) => (
  </View>
 );
 
+
+
+
 // --- Kiosk Dashboard Component (The Rotating Page Logic) ---
 
 const KioskDashboard = ({ navigate }) => {
  const pages = [
- { name: 'Weather', component: WeatherPage },
- { name: 'Image', component: ImagePage },
- { name: 'Reminders', component: RemindersPage },
- { name: 'Tasks', component: TasksPage },
+	 { name: 'Weather', component: WeatherPage },
+	 { name: 'Image', component: ImagePage },
+	 { name: 'Reminders', component: RemindersPage },
+	 { name: 'Tasks', component: TasksPage },
+	 { name: 'Recommendations', component: RecommendationsScreen },
  ];
  const [currentPageIndex, setCurrentPageIndex] = useState(0);
  
@@ -211,18 +216,20 @@ const KioskDashboard = ({ navigate }) => {
 
  // Function to render the active page
  const renderActivePage = () => {
- switch (pageName) {
- case 'Weather':
- return <WeatherPage geminiSummary={geminiWeatherSummary} />;
- case 'Tasks':
- return <TasksPage geminiInsight={geminiTaskInsight} />;
- case 'Image':
- return <ImagePage />;
- case 'Reminders':
- return <RemindersPage />;
- default:
- return null;
- }
+	 switch (pageName) {
+		 case 'Weather':
+			 return <WeatherPage geminiSummary={geminiWeatherSummary} />;
+		 case 'Tasks':
+			 return <TasksPage geminiInsight={geminiTaskInsight} />;
+		 case 'Image':
+			 return <ImagePage />;
+		 case 'Reminders':
+			 return <RemindersPage />;
+		 case 'Recommendations':
+			 return <RecommendationsScreen />;
+		 default:
+			 return null;
+	 }
  };
 
  return (

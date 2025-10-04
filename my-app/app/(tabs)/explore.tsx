@@ -31,6 +31,20 @@ export default function TabTwoScreen() {
         </ThemedText>
       </ThemedView>
       <ThemedText>This app includes example code to help you get started.</ThemedText>
+    
+    <ExternalLink href="/NutrientTable">
+          <ThemedText type="link">NutrientTable - READS LOCALLY</ThemedText>
+        </ExternalLink>
+    <ExternalLink href="/with_fAutoRecommendationLoad">
+          <ThemedText type="link">with_fAutoRecommendationLoad</ThemedText>
+        </ExternalLink>
+      <ExternalLink href="/with_fRecommendationsScreen">
+          <ThemedText type="link">with_fRecommendationsScreen</ThemedText>
+        </ExternalLink>
+          <ExternalLink href="/with_fNutriWiseAdmin">
+          <ThemedText type="link">with_fNutriWiseAdmin</ThemedText>
+        </ExternalLink>
+
       <ExternalLink href="/dashboard">
           <ThemedText type="link">Dashboard Learn more</ThemedText>
         </ExternalLink>
