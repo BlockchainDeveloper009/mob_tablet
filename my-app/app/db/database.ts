@@ -1,11 +1,11 @@
-//import * as SQLite from 'expo-sqlite/legacy';
-import * as SQLite from 'expo-sqlite';
+// //import * as SQLite from 'expo-sqlite/legacy';
+// import * as SQLite from 'expo-sqlite';
 
-export const getDbConnectionForLoans = (): SQLite.SQLiteDatabase => {
-  return SQLite.openDatabaseSync('loans.db');
-};
+// export const getDbConnectionForLoans = (): SQLite.SQLiteDatabase => {
+//   return SQLite.openDatabaseSync('loans.db');
+// };
 
 
-export const getDbConnectionForNutriWise = (): SQLite.SQLiteDatabase => {
-  return SQLite.openDatabaseSync('NutriWise.db');
-};
+// export const getDbConnectionForNutriWise = (): SQLite.SQLiteDatabase => {
+//   return SQLite.openDatabaseSync('NutriWise.db');
+// };
