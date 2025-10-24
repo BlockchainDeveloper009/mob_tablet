@@ -1,10 +1,10 @@
 import { View, Text, Image, TextInput } from 'react-native';
-import todo from '../components/todo';
+import RemindersScreen from '../components/todo';
 interface Props {
     placeholder: string;
     onPress?: ()=> void;
 }
-const search = ( { placeholder, onPress}: Props) => {
+const todo = ( { placeholder, onPress}: Props) => {
     return (
         <View className = "flex-row items-center bg-drak-200 rounded-full px-5 py-4">
             <TextInput  
@@ -24,9 +24,9 @@ const search = ( { placeholder, onPress}: Props) => {
                 placeholderTextColor="#a8b5db"
                 className="flex-1 ml-2 text-white"
             />
-            
+            <RemindersScreen />
         </View>
     )
 }
 
-export default search;
+export default todo;

@@ -39,7 +39,22 @@
           }
         }
       ],
-      "expo-background-task"
+      "expo-background-task",
+      "expo-localization",
+      [
+        "expo-calendar",
+        {
+          "calendarPermission": "The app needs to access your calendar."
+        }
+      ],
+      [
+        "expo-web-browser",
+        {
+          "experimentalLauncherActivity": true
+        }
+      ],
+      "expo-notifications"
+
     ],
     "experiments": {
       "typedRoutes": true,

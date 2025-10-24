@@ -31,6 +31,22 @@ export default function TabTwoScreen() {
         </ThemedText>
       </ThemedView>
       <ThemedText>This app includes example code to help you get started.</ThemedText>
+      
+      <ExternalLink href="/gCalendar_disp">
+          <ThemedText type="link">gCalendar_disp</ThemedText>
+      </ExternalLink>
+      <ExternalLink href="/with_calendar">
+          <ThemedText type="link">with_calendar</ThemedText>
+        </ExternalLink>
+           <ExternalLink href="/foodPlannerWithDiet">
+          <ThemedText type="link">FoodPlannerWithDiet</ThemedText>
+        </ExternalLink>
+      <ExternalLink href="/foodPlanner">
+          <ThemedText type="link">foodPlanner</ThemedText>
+        </ExternalLink>
+         <ExternalLink href="/todo">
+          <ThemedText type="link">todo</ThemedText>
+        </ExternalLink>
       <ExternalLink href="/dashboard">
           <ThemedText type="link">Dashboard Learn more</ThemedText>
         </ExternalLink>
